@@ -12,7 +12,7 @@ Sitio desplegado en GitHub Pages: **[https://digitalarmada1-a11y.github.io/umtx2
 
 El host detecta el firmware (1.00–5.50) y usa los offsets correspondientes.
 
-> **Nota:** el appcache está desactivado en este host (carga directa por HTTPS). No deberías ver "Downloading new cache..." en el navegador de la PS5.
+> **Nota:** el appcache está activo pero **sin la carpeta de payloads** (primera descarga ~0.8 MB, rápida). El bin de etaHEN se descarga por red justo al ejecutar el jailbreak; los payloads del menú se bajan al momento de usarlos.
 
 ## Payloads incluidos
 

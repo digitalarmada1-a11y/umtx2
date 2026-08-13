@@ -27,6 +27,10 @@ jobs:
       - name: Setup Pages
         uses: actions/configure-pages@v5
 
+      - name: Run appcache_manifest_generator.py (sin payloads)
+        run: |
+          python appcache_manifest_generator.py -d document/en/ps5 --no-payloads
+
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:

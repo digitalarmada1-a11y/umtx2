@@ -91,6 +91,8 @@ parser.add_argument("--update-manifest-tag", action="store_true", default=True,
                     help="Toggle updating the manifest tag in the HTML file (default: True).")
 parser.add_argument("--clean", action="store_true",
                     help="Remove the previously generated cache manifest file and the manifest attribute from the HTML file.")
+parser.add_argument("--no-payloads", action="store_true",
+                    help="Exclude the payloads folder from the cache manifest. Recomendado para hosts en GitHub Pages: la primera descarga del appcache queda en ~0.8MB.")
 args = parser.parse_args()
 
 if args.directory_path is None:
@@ -121,7 +123,7 @@ if args.clean:
         os.remove(output_path)
         print(f"Removed cache manifest: '{output_path}'")
 else:
-    cache_manifest = generate_cache_manifest(args.directory_path)
+    cache_manifest = generate_cache_manifest(args.directory_path, include_payloads=not args.no_payloads)
 
     output_path = os.path.join(args.directory_path, "cache.appcache")
     output_path = output_path.replace("\\","/")
