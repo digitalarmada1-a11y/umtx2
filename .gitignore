@@ -1,0 +1,13 @@
+# Credenciales - NUNCA subir
+git.txt
+
+# Datos internos de la app
+.freebuff/
+
+# Python
+__pycache__/
+*.pyc
+
+# Appcache generado en deploy
+cache.appcache
+document/en/ps5/cache.appcache
