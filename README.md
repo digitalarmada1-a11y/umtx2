@@ -12,6 +12,8 @@ Sitio desplegado en GitHub Pages: **[https://digitalarmada1-a11y.github.io/umtx2
 
 El host detecta el firmware (1.00–5.50) y usa los offsets correspondientes.
 
+> **Nota:** el appcache está desactivado en este host (carga directa por HTTPS). No deberías ver "Downloading new cache..." en el navegador de la PS5.
+
 ## Payloads incluidos
 
 - **etaHEN 2.3B** (`etaHEN-2.3B.bin`) — payload por defecto (auto-load)
